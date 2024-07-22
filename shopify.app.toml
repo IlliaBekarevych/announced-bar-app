@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "14080840240de9914de6ce49d5b9fb9d"
+name = "announced-bar-app"
+handle = "announced-bar-app-8"
+application_url = "https://coalition-leather-foot-gmc.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "filterupstore.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://coalition-leather-foot-gmc.trycloudflare.com/auth/callback",
+  "https://coalition-leather-foot-gmc.trycloudflare.com/auth/shopify/callback",
+  "https://coalition-leather-foot-gmc.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks"
+
+[pos]
+embedded = false

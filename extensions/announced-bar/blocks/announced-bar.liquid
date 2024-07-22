@@ -1,0 +1,17 @@
+<div id="announced-bar" style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center;">
+    {{ block.settings.message }}
+</div>
+
+{% schema %}
+{
+  "name": "Announced Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "message",
+      "label": "Message",
+      "default": "This is an announcement!"
+    }
+  ]
+}
+{% endschema %}

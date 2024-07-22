@@ -1,0 +1,11 @@
+{
+  "name": "Announced Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "message",
+      "label": "Message",
+      "default": "This is an announcement!"
+    }
+  ]
+}
